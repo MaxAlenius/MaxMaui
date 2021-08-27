@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MaxMaui.WinUI": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
+    }
+  }
+}
