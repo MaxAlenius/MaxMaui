@@ -1,0 +1,9 @@
+﻿<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:v="clr-namespace:MaxMaui.Views"
+    x:Class="MaxMaui.Pages.HomePage">
+    <Grid BackgroundColor="red" RowDefinitions="*" ColumnDefinitions="*">
+        <v:NavBarView Grid.Row="0" Grid.Column="0"></v:NavBarView>
+    </Grid>
+</ContentPage>

@@ -16,39 +16,21 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiImage
-			Include="..\MaxMaui\Resources\appicon.svg"
-			Link="Resources\appicon.svg"
-			ForegroundFile="..\MaxMaui\Resources\appiconfg.svg"
-			IsAppIcon="true"
-			Color="#512BD4" />
+		<MauiImage Include="..\MaxMaui\Resources\appicon.svg" Link="Resources\appicon.svg" ForegroundFile="..\MaxMaui\Resources\appiconfg.svg" IsAppIcon="true" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen
-			Include="..\MaxMaui\Resources\appiconfg.svg"
-			Link="Resources\appiconfg.svg"
-			Color="#512BD4" />
+		<MauiSplashScreen Include="..\MaxMaui\Resources\appiconfg.svg" Link="Resources\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Images -->
-		<MauiImage
-			Include="..\MaxMaui\Resources\Images\*"
-			Link="Resources\Images\%(Filename)%(Extension)" />
+		<MauiImage Include="..\MaxMaui\Resources\Images\*" Link="Resources\Images\%(Filename)%(Extension)" />
 
 		<!-- Custom Fonts -->
-		<MauiFont
-			Include="..\MaxMaui\Resources\Fonts\*"
-			Link="Resources\Fonts\%(Filename)%(Extension)" />
+		<MauiFont Include="..\MaxMaui\Resources\Fonts\*" Link="Resources\Fonts\%(Filename)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile
-			Include="..\MaxMaui\**\*.cs"
-			Exclude="..\MaxMaui\bin\**;..\MaxMaui\obj\**;..\MaxMaui\Platforms\**"
-			Link="%(RecursiveDir)%(Filename)%(Extension)"/>
-		<MauiXaml
-			Include="..\MaxMaui\**\*.xaml"
-			Exclude="..\MaxMaui\bin\**;..\MaxMaui\obj\**"
-			Link="%(RecursiveDir)%(FileName)%(Extension)" />
+		<Compile Include="..\MaxMaui\**\*.cs" Exclude="..\MaxMaui\bin\**;..\MaxMaui\obj\**;..\MaxMaui\Platforms\**" Link="%(RecursiveDir)%(Filename)%(Extension)" />
+		<MauiXaml Include="..\MaxMaui\**\*.xaml" Exclude="..\MaxMaui\bin\**;..\MaxMaui\obj\**" Link="%(RecursiveDir)%(FileName)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -8,16 +8,16 @@ using Microsoft.Maui.Controls.Xaml;
 
 namespace MaxMaui
 {
-	public class Startup : IStartup
-	{
-		public void Configure(IAppHostBuilder appBuilder)
-		{
-			appBuilder
-				.UseMauiApp<App>()
-				.ConfigureFonts(fonts =>
-				{
-					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				});
-		}
-	}
+    public class Startup : IStartup
+    {
+        public void Configure(IAppHostBuilder appBuilder)
+        {
+            appBuilder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+        }
+    }
 }
