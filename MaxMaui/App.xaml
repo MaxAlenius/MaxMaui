@@ -22,6 +22,7 @@
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 
+            <x:String x:Key="FontAwesomeSolid">fa-solid-900.ttf#Font Awesome 5 Free Solid</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
