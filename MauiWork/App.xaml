@@ -7,10 +7,32 @@
     <Application.Resources>
         <ResourceDictionary>
 
-            <Color x:Key="PrimaryColor">#512bdf</Color>
-            <Color x:Key="SecondaryColor">White</Color>
+            <!--
+            DARK MODE WHITE
+            
+            High-emphasis text should have an opacity of 87%
+            
+            Medium emphasis text is applied at 60%
+            
+            Disabled text uses an opacity of 38%.
+            -->
 
-            <Style TargetType="Label">
+            <Color x:Key="PrimaryColor">White</Color>
+            <Color x:Key="PrimaryColorDark">#121212</Color>
+
+
+            <Color x:Key="IconPrimaryColor">#90000000</Color>
+            <Color x:Key="IconPrimaryColorDark">#90ffffff</Color>
+
+            <Color x:Key="IconSecondaryColor">#55000000</Color>
+            <Color x:Key="IconSecondaryColorDark">#55ffffff</Color>
+
+            <Color x:Key="TextColor">Black</Color>
+            <Color x:Key="TextColorDark">White</Color>
+            
+            
+
+            <!--<Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
             </Style>
@@ -20,7 +42,17 @@
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="Padding" Value="14,10" />
+            </Style>-->
+
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor"
+                    Value="{AppThemeBinding Dark={StaticResource PrimaryColorDark}, Light={StaticResource PrimaryColor}}" />
+                <Setter Property="Shell.TabBarTitleColor"
+                    Value="{AppThemeBinding Dark={StaticResource IconPrimaryColorDark}, Light={StaticResource IconPrimaryColor}}" />
+                <Setter Property="Shell.TabBarUnselectedColor"
+                    Value="{AppThemeBinding Dark={StaticResource IconSecondaryColorDark}, Light={StaticResource IconSecondaryColor}}" />
             </Style>
+
             <x:String x:Key="FontAwesomeSolid">fa-solid-900.ttf#Font Awesome 5 Free Solid</x:String>
         </ResourceDictionary>
     </Application.Resources>

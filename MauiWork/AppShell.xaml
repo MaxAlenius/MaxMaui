@@ -3,7 +3,9 @@
        xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:fontAwesome="clr-namespace:MaxMaui.Helpers"
-       xmlns:local="clr-namespace:MauiWork">
+       xmlns:local="clr-namespace:MauiWork"
+       xmlns:pages="clr-namespace:MauiWork.Pages"
+       >
 	<!--
 	    The overall app visual hierarchy is defined here, along with navigation.
 		Ensure atleast a Flyout item or a TabBar is defined for Shell to work
@@ -52,17 +54,29 @@
     -->
 	
     <TabBar>
-        <Tab Title="About">
-            <Tab.Icon>
-                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.AddressBook}"></FontImageSource>
-            </Tab.Icon>
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
-        </Tab>
-        <Tab Title="Home">
+        <Tab Title="Hem">
             <Tab.Icon>
                 <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.Home}"></FontImageSource>
             </Tab.Icon>
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}"></ShellContent>
+            <ShellContent ContentTemplate="{DataTemplate pages:HomePage}"></ShellContent>
+        </Tab>
+        <Tab Title="Kalender">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.Calendar}"></FontImageSource>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:CalendarPage}"></ShellContent>
+        </Tab>
+        <Tab Title="Profil">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.User}"></FontImageSource>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}"></ShellContent>
+        </Tab>
+        <Tab Title="Meny">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.EllipsisV}"></FontImageSource>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:MenuPage}"></ShellContent>
         </Tab>
     </TabBar>
     
