@@ -14,7 +14,7 @@
 	<!--
 		Define the resources to be used within this Shell visual hierarchy
     -->
-	</Shell.Resources>
+    </Shell.Resources>
 	<!--
         When the Flyout is visible this defines the content to display in the flyout.
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element
@@ -52,7 +52,7 @@
         Uncomment the below section to enable TabBar item(s)
         And ensure appropriate page definitions are available for it work as expected
     -->
-	
+    
     <TabBar>
         <Tab Title="Hem">
             <Tab.Icon>
@@ -77,6 +77,12 @@
                 <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.EllipsisV}"></FontImageSource>
             </Tab.Icon>
             <ShellContent ContentTemplate="{DataTemplate pages:MenuPage}"></ShellContent>
+        </Tab>
+        <Tab Title="Settings">
+            <Tab.Icon>
+                <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static fontAwesome:FontAwesome.UserCog}"></FontImageSource>
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate pages:SettingsPage}"></ShellContent>
         </Tab>
     </TabBar>
     

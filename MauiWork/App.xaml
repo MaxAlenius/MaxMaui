@@ -5,9 +5,8 @@
              x:Class="MauiWork.App"
              windows:Application.ImageDirectory="Assets">
     <Application.Resources>
-        <ResourceDictionary>
 
-            <!--
+        <!--
             DARK MODE WHITE
             
             High-emphasis text should have an opacity of 87%
@@ -17,43 +16,39 @@
             Disabled text uses an opacity of 38%.
             -->
 
-            <Color x:Key="PrimaryColor">White</Color>
-            <Color x:Key="PrimaryColorDark">#121212</Color>
+        <Color x:Key="PrimaryColor">White</Color>
+        <Color x:Key="PrimaryColorDark">#121212</Color>
 
 
-            <Color x:Key="IconPrimaryColor">#90000000</Color>
-            <Color x:Key="IconPrimaryColorDark">#90ffffff</Color>
+        <Color x:Key="IconPrimaryColor">#90000000</Color>
+        <Color x:Key="IconPrimaryColorDark">#90ffffff</Color>
 
-            <Color x:Key="IconSecondaryColor">#55000000</Color>
-            <Color x:Key="IconSecondaryColorDark">#55ffffff</Color>
+        <Color x:Key="IconSecondaryColor">#55000000</Color>
+        <Color x:Key="IconSecondaryColorDark">#55ffffff</Color>
 
-            <Color x:Key="TextColor">Black</Color>
-            <Color x:Key="TextColorDark">White</Color>
-            
-            
+        <Color x:Key="TextColor">Black</Color>
+        <Color x:Key="TextColorDark">White</Color>
 
-            <!--<Style TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-            </Style>
+        <Color x:Key="WindowBackgroundColor">White</Color>
+        <Color x:Key="WindowBackgroundColorDark">Black</Color>
 
-            <Style TargetType="Button">
-                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
-                <Setter Property="Padding" Value="14,10" />
-            </Style>-->
-
-            <Style TargetType="TabBar">
-                <Setter Property="Shell.TabBarBackgroundColor"
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.TabBarBackgroundColor"
                     Value="{AppThemeBinding Dark={StaticResource PrimaryColorDark}, Light={StaticResource PrimaryColor}}" />
-                <Setter Property="Shell.TabBarTitleColor"
+            <Setter Property="Shell.TabBarTitleColor"
                     Value="{AppThemeBinding Dark={StaticResource IconPrimaryColorDark}, Light={StaticResource IconPrimaryColor}}" />
-                <Setter Property="Shell.TabBarUnselectedColor"
+            <Setter Property="Shell.TabBarUnselectedColor"
                     Value="{AppThemeBinding Dark={StaticResource IconSecondaryColorDark}, Light={StaticResource IconSecondaryColor}}" />
-            </Style>
+            <Setter Property="Shell.BackgroundColor"
+                    Value="{AppThemeBinding Dark={StaticResource PrimaryColorDark}, Light={StaticResource PrimaryColor}}" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="{AppThemeBinding Dark={StaticResource IconPrimaryColorDark}, Light={StaticResource IconPrimaryColor}}" />
+            <Setter Property="Shell.TitleColor"
+                    Value="{AppThemeBinding Dark={StaticResource IconPrimaryColorDark}, Light={StaticResource IconPrimaryColor}}" />
+        </Style>
+        <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+        <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
 
-            <x:String x:Key="FontAwesomeSolid">fa-solid-900.ttf#Font Awesome 5 Free Solid</x:String>
-        </ResourceDictionary>
+        <x:String x:Key="FontAwesomeSolid">fa-solid-900.ttf#Font Awesome 5 Free Solid</x:String>
     </Application.Resources>
 </Application>

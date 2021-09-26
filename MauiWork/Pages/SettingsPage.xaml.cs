@@ -1,4 +1,4 @@
-﻿using MauiWork.ViewModels;
+﻿using MauiWork.Helpers;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Xaml;
@@ -11,13 +11,12 @@ using System.Threading.Tasks;
 namespace MauiWork.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class SettingsPage : ContentPage
     {
-        public HomePage()
+        public SettingsPage()
         {
             InitializeComponent();
 
-            BindingContext = new HomeViewModel();
         }
     }
 }
